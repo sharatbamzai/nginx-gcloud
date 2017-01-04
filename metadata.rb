@@ -1,0 +1,7 @@
+name 'nginx-gcloud'
+maintainer 'Sharat Bamzai'
+maintainer_email 'sharatbamzai@gmail.com'
+license 'all_rights'
+description 'Installs/Configures nginx-gcloud'
+long_description 'Installs/Configures nginx-gcloud'
+version '0.1.0'

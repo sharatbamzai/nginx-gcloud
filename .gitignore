@@ -1,0 +1,3 @@
+.kitchen
+test/integration/default/serverspec/.DS_Store
+recipes/.DS_Store

@@ -1,0 +1,36 @@
+---
+driver:
+  name: gce
+  project: nginx-gcloud	
+  zone: us-east1-c
+  
+  tags:
+    - test-kitchen
+  service_account_scopes:
+    - devstorage.read_write
+    - userinfo.email
+
+provisioner:
+  name: chef_zero
+
+transport:
+   username: ubunt
+  
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      image_name: ubuntu-1604-xenial-v20161205
+
+firewall:
+  type: firewall
+  firewallModule:
+    network: "network"
+    sourceRanges: [ "0.0.0.0/0" ]
+    allowed:
+      - IPProtocol: "tcp"
+        ports: ["22", "80"]
+suites:
+  - name: default
+    run_list:
+      - recipe[nginx-gcloud::default]
+    attributes:
