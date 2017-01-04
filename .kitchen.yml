@@ -14,8 +14,8 @@ provisioner:
   name: chef_zero
 
 transport:
-   username: ubunt
-  
+  username: sharatbamzai
+   	  
 platforms:
   - name: ubuntu-14.04
     driver:
@@ -34,3 +34,4 @@ suites:
     run_list:
       - recipe[nginx-gcloud::default]
     attributes:
+
